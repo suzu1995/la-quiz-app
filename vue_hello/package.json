@@ -18,12 +18,14 @@
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.0.1",
+    "chart.js": "^2.9.4",
     "cross-env": "^7.0.3",
     "laravel-mix": "^4.1.2",
     "resolve-url-loader": "^3.1.0",
     "sass-loader": "^7.3.1",
     "vue": "^2.6.12",
-    "vue-social-sharing": "^3.0.4",
+    "vue-chartjs": "^3.5.1",
+    "vue-social-sharing": "^2.4.6",
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
