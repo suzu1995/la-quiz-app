@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-header></the-header>
     <main>
       <div class="container">
         <article class="col-md-8 col-xs-12">
@@ -75,34 +74,18 @@
         <the-sidebar></the-sidebar>
       </div>
     </main>
-    <the-footer></the-footer>
-
-    <!--  ここから追加 -->
     <the-modal :correctPercentageObject="correctPercentageObject" ref="modal" ></the-modal>
-    <!--  ここまで追加 -->
-
   </div>
 </template>
 
 <script>
-import TheHeader from "../layout/TheHeader";
-import TheFooter from "../layout/TheFooter";
 import TheSidebar from "../layout/TheSidebar";
-
-// ここから追加
 import TheModal from "../module/TheModal";
-// ここまで追加
 
 export default {
   components: {
-    TheHeader,
-    TheFooter,
     TheSidebar,
-
-    // ここから追加
     TheModal
-    // ここまで追加
-
   },
   data() {
     return {
@@ -119,10 +102,7 @@ export default {
       score: 0,
       quizNumber: 1,
       categoryName: "",
-
-      // ここから追加
       correctPercentageObject: {}
-      // ここまで追加
     };
   },
   mounted() {
@@ -182,8 +162,6 @@ export default {
       this.isQuizFinish = true;
       this.answerNo = "-";
       this.isAlreadyAnswered = true;
-
-      // ここから追加
       this.correctPercentageObject = {
         correctScore: this.score,
         mistakeScore: 10 - this.score
@@ -192,8 +170,6 @@ export default {
     showResult() {
       this.$refs.modal.render();
     }
-    // ここまで追加
-
   }
 };
 </script>
