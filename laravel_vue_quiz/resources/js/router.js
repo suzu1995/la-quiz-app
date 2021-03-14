@@ -4,6 +4,8 @@ import Home from './components/page/Home'
 import Quiz from './components/page/Quiz'
 import Login from './components/page/Login'
 import Register from './components/page/Register'
+import Mypage from './components/page/Mypage'
+
 
 Vue.use(Router)
 
@@ -20,17 +22,20 @@ export default new Router({
       name: 'quiz',
       component: Quiz
     },
-
     {
       path: '/login',
       name: 'login',
       component: Login
     },
-
     {
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path: '/mypage',
+      name: 'mypage',
+      component: Mypage,
     },
   ]
 })
